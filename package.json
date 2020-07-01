@@ -1,7 +1,7 @@
 {
-  "name": "node_mongoserver",
-  "version": "1.0.1",
-  "description": "node server with mongoDB and mongoose",
+  "name": "news-explorer-api",
+  "version": "1.0.0",
+  "description": "server api for news project",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -35,10 +35,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mastochka/node_mongoserver.git"
+    "url": "git+https://github.com/Mastochka/news-explorer-api.git"
   },
   "bugs": {
-    "url": "https://github.com/Mastochka/node_mongoserver/issues"
+    "url": "https://github.com/Mastochka/news-explorer-api/issues"
   },
-  "homepage": "https://github.com/Mastochka/node_mongoserver#readme"
+  "homepage": "https://github.com/Mastochka/news-explorer-api#readme"
 }
