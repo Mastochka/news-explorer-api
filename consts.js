@@ -3,7 +3,7 @@ const errorsMessages = {
   wrongEmailorPassErr: 'Неправильные почта или пароль',
   notAllowedErr: 'Нет доступа',
   unauthorizedErr: 'Необходима авторизация',
-  castError: 'Ошибочный запрос',
+  castError: 'Запрос к несуществующему объекту',
   validationErr: 'Ошибка валидации',
   serverErr: 'На сервере произошла ошибка',
   dublicateErr: 'Пользователь с этой почтой уже существует',
@@ -13,6 +13,7 @@ const errorsMessages = {
 
 const messages = {
   articleDeleted: 'Статья удалена',
+  login: 'Успешная авторизация',
 };
 
 const mongoCodes = {

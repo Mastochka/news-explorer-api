@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user.js');
 const UnauthorizedError = require('../errors/unauthorized-err');
 const { DEV_JWT_SECRET } = require('../config');
-const { errorsMessages } = require('../consts');
+const { errorsMessages, messages } = require('../consts');
 
 const { NODE_ENV, JWT_SECRET } = process.env;
 
@@ -38,7 +38,7 @@ module.exports.login = (req, res, next) => {
           return res.cookie('jwt', token, {
             maxAge: 3600000 * 24 * 7,
             httpOnly: true,
-          }).end();
+          }).send({ message: messages.login });
         })
         .catch(next);
     })
