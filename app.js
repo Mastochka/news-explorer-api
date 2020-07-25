@@ -2,6 +2,8 @@ const express = require('express');
 
 require('dotenv').config();
 
+const cors = require('cors');
+
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -32,6 +34,17 @@ mongoose.connect(NODE_ENV === 'production' ? DATABASE_URL : DEV_DATABASE_URL, {
 app.use(helmet());
 
 app.use(rateLimiter);
+
+const corsOptions = {
+  origin: ['https://mastochka.github.io', 'http://localhost:8081', 'http://localhost:8080'],
+  methods: 'GET, POST, PUT, PATCH, DELETE, HEAD',
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+  allowedHeaders: ['Content-Type'],
+  credentials: true,
+};
+
+app.use('*', cors(corsOptions));
 
 app.use(requestLogger);
 

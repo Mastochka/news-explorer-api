@@ -50,3 +50,8 @@ module.exports.getUser = (req, res, next) => {
     .then((user) => res.send({ data: { name: user.name, email: user.email } }))
     .catch(next);
 };
+
+module.exports.logout = (req, res) => res.cookie('jwt', '', {
+  maxAge: 0,
+  httpOnly: true,
+}).send({ message: 'Пользователь вышел' });
