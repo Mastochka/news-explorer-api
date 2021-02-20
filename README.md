@@ -1,4 +1,4 @@
-# news-explorer-api sever
+# news-explorer-api server
 # Server running up @ https://api.mesto-project.ru
 
 ## Stack
@@ -6,8 +6,8 @@
 ### Express.js
 ### MongoDB  
 ### mongoose
-### celebrate (for request validation)
+### celebrate (for requests validation)
 
-## description
+## Description
 API creates users and saves articles from other API
 For example You can create new user at https://api.mesto-project.ru/signup
